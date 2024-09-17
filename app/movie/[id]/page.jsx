@@ -1,11 +1,14 @@
 "use client";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import Iframe from 'react-iframe'
 
 
 const MovieCard = ({ data }) => {
+
+    const router = useRouter()
+
     return (
         <div className='flex flex-col w-full '>
             <div className='flex flex-col'>
@@ -14,9 +17,7 @@ const MovieCard = ({ data }) => {
                 alt={data.title}
                 className=" h-72 aspect-auto"
             /> */}
-            <Link href={`/`} className="cursor-pointer text-xl text-white " >
-                <h2> ««« </h2>
-            </Link>
+            <div className="bg-slate-500 cursor-pointer text-xl text-white" onClick={() => router.back()}> «« Go Back</div>
             <h2 className="font-jost text-xl text-white ">
                 {data.title}
             </h2>
@@ -55,7 +56,6 @@ const Canvas = () => {
 
     return (
         <section className=''>
-            <h1 className="text-white ">{params.id}</h1>
             <MovieCard data={movieUrl} />
         </section>
     );
