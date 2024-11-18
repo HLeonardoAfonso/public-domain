@@ -21,7 +21,7 @@ const NewIn = () => {
 
     
     return (
-        <section className='px-20'>
+        <section className="pt-3">
             <h2 className="text-[28px] text-white font-jost pb-4 ">|| New In Public Domain ||</h2>
             <MovieCard data={yearMovies} />
         </section>

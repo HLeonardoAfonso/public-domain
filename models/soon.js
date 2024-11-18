@@ -1,6 +1,6 @@
 import { Schema, models, model } from 'mongoose';
 
-const movieSchema = new Schema(
+const soonSchema = new Schema(
     {
         title: String,
         minutes: String,
@@ -8,11 +8,10 @@ const movieSchema = new Schema(
         poster: String,
         movie: String,
         silent: Boolean,
-        closed: Boolean,
         genres: Array,
     }
 );
 
-const Mango = models.movie || model('movie', movieSchema, 'movie');
+const Sango = models.soon || model('soon', soonSchema, 'soon');
 
-export default Mango;
+export default Sango;

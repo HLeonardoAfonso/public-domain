@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./UI/MovieCard";
 
-const MoveList = () => {
+const MovieList = () => {
     const [allMovies, setAllMovies] = useState([]);
 
     const fetchMovies = async () => {
@@ -23,4 +23,4 @@ const MoveList = () => {
     );
 };
 
-export default MoveList;
+export default MovieList;

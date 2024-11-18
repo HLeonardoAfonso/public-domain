@@ -7,6 +7,14 @@
   src: url("../utils/fonts/Jost-VariableFont_wght.ttf");
 }
 
+@layer utilities {
+
+  .center {
+    @apply flex justify-center items-center;
+  }
+
+}
+
 body {
   background-color: #1E1A19;
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const MovieCard = ({ data }) => {
     return (
-        <div className='flex flex-wrap gap-5'>
+        <div className='flex flex-wrap justify-center gap-5'>
             {data.map((movie) => (
                 <Link href={`/movie/${movie._id}`} className="cursor-pointer" >
 
