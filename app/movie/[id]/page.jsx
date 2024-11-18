@@ -49,7 +49,7 @@ const Canvas = () => {
         setMovieUrl(data);
     };
 
-    useEffect(() => {
+    useEffect((getUrl) => {
         getUrl();
     }, []);
 
