@@ -1,19 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const MovieCard = ({ data, onCardClick }) => {
+const MovieCard = ({ data }) => {
     return (
         <div className='flex flex-wrap justify-center gap-5'>
             {data.map((movie) => (
-                <div 
+                <Link 
+                    href={`/movie/${movie._id}`} 
                     className="cursor-pointer" 
-                    onClick={() => onCardClick(movie)} // Trigger modal on click
+                    key={movie._id}
                 >
 
                     {/* poster */}
                     <img
-                        src={movie.poster}
-                        alt={movie.title}
-                        className=" h-64 aspect-auto"
+                    src={movie.poster}
+                    alt={movie.title}
+                    className=" h-64 aspect-auto"
                     />
           
                     {/* lable */}
@@ -28,15 +30,15 @@ const MovieCard = ({ data, onCardClick }) => {
                             </p>
                             {movie.silent &&
                                 <Image
-                                    src="/silent.png"
-                                    width={23}
-                                    height={2}
-                                    alt="Silent Icon"
-                                />
+                                src="/silent.png"
+                                width={23}
+                                height={2}
+                                alt="Silent Icon"
+                            />
                             }
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

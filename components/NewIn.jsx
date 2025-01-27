@@ -9,7 +9,7 @@ const NewIn = () => {
     const [yearMovies, setYearMovies] = useState([]);
 
     const fetchYearMovies = async () => {
-        const response = await fetch(`http://localhost:3000/api/year/${year}`);
+        const response = await fetch(`/api/year/${year}`);
         const data = await response.json();
 
         setYearMovies(data);
