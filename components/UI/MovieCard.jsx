@@ -3,8 +3,9 @@ import Image from "next/image";
 const MovieCard = ({ data, onCardClick }) => {
     return (
         <div className='flex flex-wrap justify-center gap-5'>
-            {data.map((movie) => (
+            {data.map((movie, index) => (
                 <div 
+                    key={movie.id} // Add a unique key prop here
                     className="cursor-pointer" 
                     onClick={() => onCardClick(movie)} // Trigger modal on click
                 >
