@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body  className="p-16 flex flex-col gap-10">{children}</body>
+      <body  className="py-16 px-0 sm:px-16 lg:px-20 flex flex-col gap-10">{children}</body>
     </html>
   );
 }

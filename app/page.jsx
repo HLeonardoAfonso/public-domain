@@ -2,7 +2,7 @@ import MovieSearch from "@/components/MovieSearch";
 
 export default function Home() {  
   return (
-    <main className='lg:px-20 px-0'>
+    <main className=''>
       <MovieSearch />
     </main>
   );
