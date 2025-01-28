@@ -97,7 +97,7 @@ const MovieSearch = () => {
     };
 
     return (
-        <section className="p-4 flex flex-col items-center font-jost bg-red-500">
+        <section className="p-4 flex flex-col items-center font-jost ">
             {/* Search bar and toggle button */}
             <SearchBarToggle
                 searchTerm={searchTerm}

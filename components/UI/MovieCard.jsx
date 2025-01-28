@@ -14,7 +14,7 @@ const MovieCard = ({ data, onCardClick }) => {
                     <img
                         src={movie.poster}
                         alt={movie.title}
-                        className=" h-52 sm:h-64 aspect-auto"
+                        className=" h-56 sm:h-64 aspect-auto"
                     />
           
                     {/* lable */}
