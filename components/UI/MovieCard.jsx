@@ -14,12 +14,12 @@ const MovieCard = ({ data, onCardClick }) => {
                     <img
                         src={movie.poster}
                         alt={movie.title}
-                        className=" h-64 aspect-auto"
+                        className=" h-44 sm:h-64 aspect-auto"
                     />
           
                     {/* lable */}
                     <div className="py-2 flex flex-col ">
-                        <h2 className="font-jost text-lg text-white max-w-44 truncate">
+                        <h2 className="font-jost text-lg text-white max-w-32 sm:max-w-44 truncate">
                             {movie.title}
                         </h2>
                 

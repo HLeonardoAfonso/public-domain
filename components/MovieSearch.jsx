@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import MovieCard from "./UI/MovieCard";
 import MovieModal from "./UI/MovieModal";
 import SearchBarToggle from "./UI/SearchBarToggle";
+import NewIn from "./NewIn";
 
 const MovieSearch = () => {
     const [allMovies, setAllMovies] = useState([]);

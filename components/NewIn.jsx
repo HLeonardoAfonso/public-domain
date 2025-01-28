@@ -4,7 +4,7 @@ import MovieCard from "./UI/MovieCard";
 
 const NewIn = () => {
 
-    const year = 1928;
+    const year = 1925;
 
     const [yearMovies, setYearMovies] = useState([]);
 
@@ -21,7 +21,7 @@ const NewIn = () => {
 
     
     return (
-        <section className="pt-3">
+        <section className="py-3">
             <h2 className="text-[28px] text-white font-jost pb-4 ">|| New In Public Domain ||</h2>
             <MovieCard data={yearMovies} />
         </section>
