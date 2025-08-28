@@ -9,12 +9,11 @@ const MovieCard = ({ data, onCardClick }) => {
                     className="cursor-pointer" 
                     onClick={() => onCardClick(movie)} // Trigger modal on click
                 >
-
                     {/* poster */}
                     <img
                         src={movie.poster}
                         alt={movie.title}
-                        className=" h-56 sm:h-64 aspect-auto"
+                        className=" h-48 sm:h-64 aspect-auto"
                     />
           
                     {/* lable */}

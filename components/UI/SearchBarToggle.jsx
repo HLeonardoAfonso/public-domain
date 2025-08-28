@@ -9,7 +9,7 @@ const SearchBarToggle = ({ searchTerm, onSearchChange, viewMode, setViewMode }) 
                 placeholder="Search movies by title, year, or silent..."
                 value={searchTerm}
                 onChange={onSearchChange} // Call the passed `onSearchChange` function
-                className="bg-transparent border border-white text-white h-7 md:w-[500px] w-[80%] rounded-full p-5 focus:outline-none"
+                className="bg-transparent border border-white text-white h-7 md:w-[500px] w-[80%] rounded-full p-5 focus:outline-none truncate"
             />
 
             {/* Toggle Button */}
