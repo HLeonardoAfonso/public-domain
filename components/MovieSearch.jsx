@@ -118,32 +118,30 @@ const MovieSearch = () => {
                 </div>
             ) : viewMode === "byYear" ? (
                 <div className="w-full flex flex-col items-start">
-                    {Object.keys(moviesByYear)
-                        .sort((a, b) => a - b) // Sort years in ascending order
-                        .map((year) => (
-                            <div key={year} className="w-full">
-                                {/* Year Label */}
-                                <div className="text-white font-bold text-xl mt-8 mb-4 border-b border-gray-500 pb-2">
-                                    {year}
-                                </div>
-                                {/* Movies for the Year */}
-                                <div className='flex flex-wrap justify-center gap-5'>
-                                    {moviesByYear[year].map((movie, index) => (
-                                        <MovieCard key={movie.id} movie={movie} />
-                                    ))}
-                                </div>
-                                {/* <MovieCard
-                                    data={moviesByYear[year]}
-                                    onCardClick={handleCardClick} // Pass handleCardClick function
-                                    alignLeft // Align posters to the left in "by year" mode
-                                /> */}
+                {Object.keys(moviesByYear)
+                    .sort((a, b) => a - b)
+                    .map((year) => (
+                    <div key={year} className="w-full">
+                        {/* Year Label */}
+                        <div className="text-white font-bold text-xl mt-8 mb-4 border-b border-gray-500 pb-2">
+                        {year}
+                        </div>
+
+                        {/* Movies for the Year */}
+                        <div className="flex overflow-x-auto scroll-smooth scrollbar-hide gap-2 sm:gap-5">
+                        {moviesByYear[year].map((movie) => (
+                            <div key={movie.id} className="flex-shrink-0">
+                            <MovieCard movie={movie} onCardClick={handleCardClick} />
                             </div>
                         ))}
+                        </div>
+                    </div>
+                    ))}
                 </div>
             ) : (
-                <div className='flex flex-wrap justify-center gap-5'>
+                <div className='flex flex-wrap justify-center gap-2 sm:gap-5'>
                     {allMovies.map((movie, index) => (
-                        <MovieCard key={movie.id} movie={movie} />
+                        <MovieCard key={movie.id} movie={movie} onCardClick={handleCardClick} />
                     ))}
                 </div>
             )}

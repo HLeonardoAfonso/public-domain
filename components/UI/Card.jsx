@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onCardClick }) => {
+
     return (
         <div 
             key={movie.id} // Add a unique key prop here
@@ -11,7 +12,7 @@ const MovieCard = ({ movie }) => {
             <img
                 src={movie.poster}
                 alt={movie.title}
-                className=" h-40 sm:h-64 aspect-auto"
+                className=" h-[185px] sm:h-64 aspect-auto"
             />
     
             {/* lable */}
