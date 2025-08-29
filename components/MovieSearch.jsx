@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import MovieCard from "./UI/MovieCard";
+import MovieCard from "./UI/Card";
 import MovieModal from "./UI/MovieModal";
 import SearchBarToggle from "./UI/SearchBarToggle";
 import NewIn from "./NewIn";
@@ -127,19 +127,25 @@ const MovieSearch = () => {
                                     {year}
                                 </div>
                                 {/* Movies for the Year */}
-                                <MovieCard
+                                <div className='flex flex-wrap justify-center gap-5'>
+                                    {moviesByYear[year].map((movie, index) => (
+                                        <MovieCard key={movie.id} movie={movie} />
+                                    ))}
+                                </div>
+                                {/* <MovieCard
                                     data={moviesByYear[year]}
                                     onCardClick={handleCardClick} // Pass handleCardClick function
                                     alignLeft // Align posters to the left in "by year" mode
-                                />
+                                /> */}
                             </div>
                         ))}
                 </div>
             ) : (
-                <MovieCard
-                    data={filteredMovies}
-                    onCardClick={handleCardClick} // Pass handleCardClick function
-                />
+                <div className='flex flex-wrap justify-center gap-5'>
+                    {allMovies.map((movie, index) => (
+                        <MovieCard key={movie.id} movie={movie} />
+                    ))}
+                </div>
             )}
 
             {/* Modal */}

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import MovieCard from "./UI/MovieCard";
+import MovieCard from "./UI/Card";
 
 const NewIn = () => {
 
